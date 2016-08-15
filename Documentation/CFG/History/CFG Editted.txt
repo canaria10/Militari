@@ -1,0 +1,108 @@
+1	<program>	?	<header> 	<globalDec>	<main>	<Localdec>	<body>	<end>	
+2	<header>	?	standby	<headID>;	<header>				
+3	<headID>	?	ALPHA						
+4	<headID>	?	BRAVO						
+5	<headID>	?	CHARLIE						
+6	<header>	?	?						
+7	<const>	?	hold	idn	=	<value>;	<const>		
+8	<const>	?	?						
+9	<globalDec>	?	<unitType>	<joeType>	<digitType>	<companyType>	<responseType>		
+10	<globalDec>	?	?						
+11	<unitType>	?	unit	idn	<unitInit>;	<unitType>			
+12	<unitType>	?	?						
+13	<unitInit>	?	=	num					
+14	<unitInit>	?	=	zero					
+15	<unitInit>	?	=	zero,	idn	<unitInit>			
+16	<unitInit>	?	=	num,	idn	<unitInit>			
+17	<unitInit>	?	?						
+18	<joeType>	?	joe	idn	<joeInit>;	<joeType>			
+19	<joeType>	?	?						
+20	<joeInit>	?	=	upperChar					
+21	<joeInit>	?	=	loweChar					
+22	<joeInit>	?	=	"loweChar,"	idn	<joeInit>			
+23	<joeInit>	?	=	"upperChar,"	idn	<joeInit>			
+24	<joeInit>	?	?						
+25	<digitType>	?	digit	idn	<digitInit>;	<digitType>			
+26	<digitType>	?	?						
+27	<digitInit>	?	=	num					
+28	<digitInit>	?	=	zero					
+29	<digitInit>	?	=	"zero ,"	idn	<digitInit>			
+30	<digitInit>	?	=	"num,"	idn	<digitInit>			
+31	<digitInit>	?	?						
+32	<companyType>	?	company	idn	<companyInit>	<companyType>			
+33	<companyType>	?	?						
+34	<companyInit>	?	=	ASCII					
+35	<companyInit>	?	=	"ASCII,"	idn	<companyInit>			
+36	<companyInit>	?	=	""" """					
+37	<companyInit>	?	=	""" "","	idn	<companyInit>			
+38	<companyInit>	?	?						
+39	<responseType>	?	response	idn	<responseInit>;	<responseType>			
+40	<responseType>	?	?						
+41	<responseInit>	?	=	bool					
+42	<responseInit>	?	=	"bool,"	idn	<responseInit>			
+43	<responseInit>	?	?						
+44	<main>	?	PrimaryMission() { 						
+45	<Localdec>	?	<unitType>	<joeType>	<digitType>	<companyType>	<responseType>	<ArrType>	
+46	<Localdec>	?	?						
+47	<unitType>	?	unit	idn	<unitInit>;	<unitType>			
+48	<unitType>	?	?						
+49	<unitInit>	?	=	num					
+50	<unitInit>	?	=	zero					
+51	<unitInit>	?	=	"zero ,"	idn	<unitInit>			
+52	<unitInit>	?	=	"num,"	idn	<unitInit>			
+53	<unitInit>	?	?						
+54	<joeType>	?	joe	idn	<joeInit>;	<joeType>			
+55	<joeType>	?	?						
+56	<joeInit>	?	=	upperChar					
+57	<joeInit>	?	=	loweChar					
+58	<joeInit>	?	=	"loweChar,"	idn	<joeInit>			
+59	<joeInit>	?	=	"upperChar,"	idn	<joeInit>			
+60	<joeInit>	?	?						
+61	<digitType>	?	digit	idn	<digitInit>;	<digitType>			
+62	<digitType>	?	?						
+63	<digitInit>	?	=	num					
+64	<digitInit>	?	=	zero					
+65	<digitInit>	?	=	"zero ,"	idn	<digitInit>			
+66	<digitInit>	?	=	"num,"	idn	<digitInit>			
+67	<digitInit>	?	?						
+68	<companyType>	?	company	idn	<companyInit>	<companyType>			
+69	<companyType>	?	?						
+70	<companyInit>	?	=	ASCII					
+71	<companyInit>	?	=	"ASCII,"	idn	<companyInit>			
+72	<companyInit>	?	=	""" """					
+73	<companyInit>	?	=	""" "","	idn	<companyInit>			
+74	<companyInit>	?	?						
+75	<responseType>	?	response	idn	<responseInit>;	<responseType>			
+76	<responseType>	?	?						
+77	<responseInit>	?	=	bool					
+78	<responseInit>	?	=	"bool,"	idn	<responseInit>			
+79	<responseInit>	?	?						
+80	<arrType>	?	<arrUnit>	<arrJoe>	<arrDigit>	<arrCompany>			
+81	<arrType>	?	?						
+82	<arrUnit>	?	unit	[<index>]	<unitAID>;	<arrUnit>			
+83	<arrUnit>	?	?						
+84	<index>	?	num						
+85	<unitAID>	?	=	"{num},"					
+86	<unitAID>	?	=	{num}					
+87	<arrJoe>	?	joe	[<index>]	<joeAID>;	<arrJoe>			
+88	<arrJoe>	?	?						
+89	<joeAID> 	?	=	"{upperChar},"	<arrJoe>				
+90	<joeAID> 	?	=	{upperChar}					
+91	<joeAID> 	?	=	"{lowerChar},"	<arrJoe>				
+92	<joeAID> 	?	=	{lowerChar}					
+93	<joeAID> 	?	?						
+94	<arrDigit>	?	digit	[<index>]	<digitAID>	<arrDigit>;			
+95	<arrDigit>	?	?						
+96	<digitAID>	?	=	{decimal}					
+97	<digitAID>	?	=	"{decimal},"					
+98	<digitAID>	?	?						
+99	<arrCompany>	?	company	[<index>]	<companyAID>	<arrCompany>			
+100	<arrCompany>	?	?						
+101	<companyAID>	?	=	{upperChar}					
+102	<companyAID>	?	=	"{upperChar},"					
+103	<companyAID>	?	=	{lowerChar}					
+104	<companyAID>	?	=	"{lowerChar},"					
+105	<companyAID>	?	?						
+									
+									
+									
